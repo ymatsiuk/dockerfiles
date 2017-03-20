@@ -1,5 +1,7 @@
 # docker run --rm -it -p 50000:50000 ymatsiuk/jenkins-slave -username USER -password PASSWORD -master JENKINS_URL -name NAME -labels LABEL
 
+# kubectl run --rm -it IMAGE_NAME --image=ymatsiuk/jenkins-slave -n NAMESPACE -- -username USER -password PASSWORD -master JENKINS_URL -name NAME -labels LABEL
+
 FROM java:8-jre-alpine
 
 ENV SWARM_VERSION=3.3
