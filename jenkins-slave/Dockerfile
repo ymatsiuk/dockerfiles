@@ -10,8 +10,4 @@ ENV SWARM_CLIENT_URL="https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugin
 RUN apk add --no-cache ca-certificates wget && \
 	wget -q "${SWARM_CLIENT_URL}" -O swarm-client.jar
 
-# where OPT_SWARM_ARGS could be found here:
-# https://wiki.jenkins-ci.org/display/JENKINS/Swarm+Plugin
-# example: OPT_SWARM_ARGS="-username slave_user -password slave_password -label slave_label"
-
 ENTRYPOINT ["java", "-jar", "swarm-client.jar"]
