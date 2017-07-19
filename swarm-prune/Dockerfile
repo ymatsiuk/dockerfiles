@@ -21,4 +21,4 @@
 # docker run --mount type=bind,src=/var/run/docker.sock,dst=/var/run/docker.sock -it ymatsiuk/swarm-prune
 
 FROM docker:edge
-CMD ["docker", "system", "prune", "--force"]
+CMD ["docker", "system", "prune", "--force", "--all"]
