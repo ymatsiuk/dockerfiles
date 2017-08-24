@@ -12,6 +12,7 @@ RUN apk add --update --no-cache --virtual=build-dependencies wget ca-certificate
     apk del build-dependencies && \
     apk add python && \
     rm -rf ${CASSANDRA_HOME}/javadoc && \
-    rm -rf ${CASSANDRA_HOME}/doc
+    rm -rf ${CASSANDRA_HOME}/doc && \
+    rm -rf /tmp/*
 
-CMD ["/bin/sh", "-c", "top"]
+CMD ["tail", "-f", "/dev/null"]
